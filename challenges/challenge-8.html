@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge 8: The Pluto Protocol | Operation ORBI</title>
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/challenges.css">
+    <script src="../scripts/cursor.js" defer></script>
+    <script src="../scripts/sky-comets.js" defer></script>
+    <script src="../scripts/ctf-progress.js" defer></script>
+</head>
+<body>
+    <header class="site-header">
+        <nav class="navbar">
+            <a href="https://www.plutohacks.com/" class="logo">
+                <img src="../Images/plutohacks-logo.svg" alt="PlutoHacks" class="logo-image">
+            </a>
+            <div class="nav-links">
+                <a href="../index.html">About</a>
+                <a href="../ctf.html" class="active" aria-current="page">CTF</a>
+                <a href="../faq.html">FAQ</a>
+            </div>
+            <a href="https://www.plutohacks.com/" class="register-button">
+                BACK TO PLUTOHACKS →
+            </a>
+        </nav>
+    </header>
+
+    <main class="challenge-page">
+        <a href="../ctf.html" class="back-link">← Back to Your Mission</a>
+
+        <section class="challenge-hero">
+            <p class="challenge-kicker">CHALLENGE 08 · FINAL MISSION</p>
+            <h1 class="challenge-title">The Pluto Protocol</h1>
+            <p class="challenge-lead">Seven recovery systems are back online. The final recovery signal was present before the mission even began.</p>
+        </section>
+
+        <div class="challenge-layout">
+            <div class="challenge-stack">
+                <section class="challenge-panel">
+                    <h2>Your Task</h2>
+                    <p>
+                        ORBI remembers that the final recovery signal was hidden on the page
+                        where Operation ORBI began.
+                    </p>
+
+                    <div class="code-block">FINAL RECOVERY LOG:
+
+Return to the beginning.
+Three familiar lines carry more than they show.
+Read what the page contains — not only what it displays.
+
+Recover the three fragments.
+Decode them.
+Keep them in the order you find them.</div>
+
+                    <p style="margin-top:14px;">
+                        When the three decoded words are combined, submit them as
+                        <code>PLUTO{WORD_WORD_WORD}</code>.
+                    </p>
+                </section>
+
+                
+        <section class="challenge-panel" data-final-gate>
+            <div data-final-locked>
+                <div class="locked-panel">
+                    <strong>🔒 Final protocol locked.</strong>
+                    <p style="margin-top:8px;">Complete challenges 1–7 before ORBI can open the final recovery console.</p>
+                </div>
+            </div>
+            <div data-final-unlocked hidden>
+                <h2>Submit Final Flag</h2>
+                <p>Flags use the format <code>PLUTO{...}</code>. Input is not case-sensitive.</p>
+                <form class="flag-form"
+                      data-flag-form
+                      data-challenge-id="8"
+                      data-flag-hash="f14eac94bf599c03566945de5eaae154ab3b29c7e70eaf77bf8d2dadb4e3b1d9">
+                    <div class="flag-row">
+                        <input type="text"
+                               class="flag-input"
+                               data-flag-input
+                               autocomplete="off"
+                               spellcheck="false"
+                               placeholder="PLUTO{...}"
+                               aria-label="Final challenge flag">
+                        <button type="submit" class="flag-submit">Restore Access</button>
+                    </div>
+                    <div class="flag-message" data-flag-message aria-live="polite"></div>
+                </form>
+                <div class="success-actions" data-success-actions hidden>
+                    <a href="../completion.html" class="ctf-action">Open Completion Screen →</a>
+                </div>
+            </div>
+        </section>
+        
+            </div>
+
+            <aside class="challenge-sidebar">
+                <section class="side-card">
+                    <strong>Challenge 8 of 8</strong>
+                    <p>Final Mission</p>
+                </section>
+
+                <section class="side-card">
+                    <strong>Need a hint?</strong>
+                    <p>Hints are optional. Open only what you need.</p>
+                    <details class="hint-box">
+            <summary>Hint 1</summary>
+            <p>
+                “Where Operation ORBI began” means the CTF home page.
+                The visible words are not the answers themselves.
+            </p>
+        </details>
+<details class="hint-box">
+            <summary>Hint 2</summary>
+            <p>
+                Inspect the HTML for the three main hero text elements near
+                <code>OPERATION</code>, <code>ORBI</code>, and
+                <code>A PLUTOHACKS MINI CTF</code>.
+            </p>
+        </details>
+<details class="hint-box">
+            <summary>Hint 3</summary>
+            <p>
+                Look for unusual <code>data-signal</code> values. They are Base64.
+                Decode each value and keep them in page order.
+            </p>
+        </details>
+                </section>
+
+                <section class="side-card">
+                    <strong>ORBI says:</strong>
+                    <p>“Sometimes the answer was in front of you before you knew what to look for.”</p>
+                </section>
+            </aside>
+        </div>
+    </main>
+
+    <canvas id="comet-cursor" aria-hidden="true"></canvas>
+    <canvas id="sky-comets" aria-hidden="true"></canvas>
+</body>
+</html>

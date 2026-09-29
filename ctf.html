@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CTF Challenges Dashboard | Operation ORBI</title>
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/ctf.css">
+    <script src="scripts/cursor.js" defer></script>
+    <script src="scripts/sky-comets.js" defer></script>
+    <script src="scripts/ctf-progress.js" defer></script>
+</head>
+<body>
+    <header class="site-header">
+        <nav class="navbar">
+            <a href="https://www.plutohacks.com/" class="logo">
+                <img src="Images/plutohacks-logo.svg" alt="PlutoHacks" class="logo-image">
+            </a>
+
+            <div class="nav-links">
+                <a href="index.html">About</a>
+                <a href="ctf.html" class="active" aria-current="page">CTF</a>
+                <a href="faq.html">FAQ</a>
+            </div>
+
+            <a href="https://www.plutohacks.com/" class="register-button">
+                BACK TO PLUTOHACKS →
+            </a>
+        </nav>
+    </header>
+
+    <main class="ctf-page">
+        <section class="ctf-intro">
+            <p class="ctf-eyebrow">OPERATION ORBI</p>
+            <h1>Your Mission</h1>
+            <p class="ctf-description">
+                ORBI needs your help restoring access to the PlutoHacks system.
+                Complete all eight challenges, recover the final access key,
+                and earn a raffle ticket!
+            </p>
+
+            <div class="ctf-progress">
+                <div class="progress-heading">
+                    <span>Mission Progress</span>
+                    <span id="progressText">0 / 8</span>
+                </div>
+                <div class="progress-track">
+                    <div class="progress-fill" id="progressFill"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mission-complete-banner" id="missionCompleteBanner" hidden>
+            <div>
+                <strong>✓ Operation ORBI restored.</strong>
+                <p>You completed all eight challenges.</p>
+            </div>
+            <a href="completion.html" class="mission-complete-link">Completion Screen →</a>
+        </section>
+
+        <section class="challenge-section">
+            <div class="challenge-grid">
+
+                <a href="challenges/challenge-1.html"
+                   class="challenge-card"
+                   data-challenge-id="1">
+                    <div class="challenge-number">01</div>
+                    <div class="challenge-icon">🔎</div>
+                    <div class="challenge-info">
+                        <span class="challenge-type">Beginner</span>
+                        <h2>The Hidden Message</h2>
+                        <p>Something has been hidden in plain sight. Can you find it?</p>
+                        <span class="challenge-status">Not completed</span>
+                    </div>
+                    <span class="challenge-arrow">→</span>
+                </a>
+
+                <a href="challenges/challenge-2.html"
+                   class="challenge-card"
+                   data-challenge-id="2">
+                    <div class="challenge-number">02</div>
+                    <div class="challenge-icon">🔐</div>
+                    <div class="challenge-info">
+                        <span class="challenge-type">Cryptography</span>
+                        <h2>Caesar's Cipher</h2>
+                        <p>ORBI intercepted a strange transmission. Decode the message.</p>
+                        <span class="challenge-status">Not completed</span>
+                    </div>
+                    <span class="challenge-arrow">→</span>
+                </a>
+
+                <a href="challenges/challenge-3.html"
+                   class="challenge-card"
+                   data-challenge-id="3">
+                    <div class="challenge-number">03</div>
+                    <div class="challenge-icon">🖼️</div>
+                    <div class="challenge-info">
+                        <span class="challenge-type">Forensics</span>
+                        <h2>A Mysterious Image</h2>
+                        <p>The picture looks normal, but the file may know more.</p>
+                        <span class="challenge-status">Not completed</span>
+                    </div>
+                    <span class="challenge-arrow">→</span>
+                </a>
+
+                <a href="challenges/challenge-4.html"
+                   class="challenge-card"
+                   data-challenge-id="4">
+                    <div class="challenge-number">04</div>
+                    <div class="challenge-icon">📡</div>
+                    <div class="challenge-info">
+                        <span class="challenge-type">Forensics</span>
+                        <h2>The Video Transmission</h2>
+                        <p>A clue flashes through the transmission for only a moment.</p>
+                        <span class="challenge-status">Not completed</span>
+                    </div>
+                    <span class="challenge-arrow">→</span>
+                </a>
+
+                <a href="challenges/challenge-5.html"
+                   class="challenge-card"
+                   data-challenge-id="5">
+                    <div class="challenge-number">05</div>
+                    <div class="challenge-icon">&lt;/&gt;</div>
+                    <div class="challenge-info">
+                        <span class="challenge-type">Web</span>
+                        <h2>Developer Leftovers</h2>
+                        <p>Developers sometimes leave paths behind for machines to find.</p>
+                        <span class="challenge-status">Not completed</span>
+                    </div>
+                    <span class="challenge-arrow">→</span>
+                </a>
+
+                <a href="challenges/challenge-6.html"
+                   class="challenge-card"
+                   data-challenge-id="6">
+                    <div class="challenge-number">06</div>
+                    <div class="challenge-icon">📍</div>
+                    <div class="challenge-info">
+                        <span class="challenge-type">Physical</span>
+                        <h2>Around the Venue</h2>
+                        <p>Leave the browser and locate ORBI's hidden venue code.</p>
+                        <span class="challenge-status">Not completed</span>
+                    </div>
+                    <span class="challenge-arrow">→</span>
+                </a>
+
+                <a href="challenges/challenge-7.html"
+                   class="challenge-card"
+                   data-challenge-id="7">
+                    <div class="challenge-number">07</div>
+                    <div class="challenge-icon">🔑</div>
+                    <div class="challenge-info">
+                        <span class="challenge-type">Security</span>
+                        <h2>Password Problems</h2>
+                        <p>Match a captured hash to one of ORBI's suspicious passwords.</p>
+                        <span class="challenge-status">Not completed</span>
+                    </div>
+                    <span class="challenge-arrow">→</span>
+                </a>
+
+                <a href="challenges/challenge-8.html"
+                   class="challenge-card final-challenge"
+                   data-challenge-id="8">
+                    <div class="challenge-number">08</div>
+                    <div class="challenge-icon">🪐</div>
+                    <div class="challenge-info">
+                        <span class="challenge-type">Final Mission</span>
+                        <h2>The Pluto Protocol</h2>
+                        <p>Use the PlutoHacks mission theme to restore ORBI's access.</p>
+                        <span class="challenge-status">Not completed</span>
+                    </div>
+                    <span class="challenge-arrow">→</span>
+                </a>
+
+            </div>
+        </section>
+
+        <section class="orbi-message">
+            <div class="orbi-message-icon">🪐</div>
+            <div>
+                <p>"Take your time! Every challenge teaches you something new."</p>
+                <span>— ORBI</span>
+            </div>
+        </section>
+    </main>
+
+    <canvas id="comet-cursor" aria-hidden="true"></canvas>
+    <canvas id="sky-comets" aria-hidden="true"></canvas>
+</body>
+</html>

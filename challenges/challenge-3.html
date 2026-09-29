@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge 3: A Mysterious Image | Operation ORBI</title>
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/challenges.css">
+    <script src="../scripts/cursor.js" defer></script>
+    <script src="../scripts/sky-comets.js" defer></script>
+    <script src="../scripts/ctf-progress.js" defer></script>
+</head>
+<body>
+    <header class="site-header">
+        <nav class="navbar">
+            <a href="https://www.plutohacks.com/" class="logo">
+                <img src="../Images/plutohacks-logo.svg" alt="PlutoHacks" class="logo-image">
+            </a>
+            <div class="nav-links">
+                <a href="../index.html">About</a>
+                <a href="../ctf.html" class="active" aria-current="page">CTF</a>
+                <a href="../faq.html">FAQ</a>
+            </div>
+            <a href="https://www.plutohacks.com/" class="register-button">
+                BACK TO PLUTOHACKS →
+            </a>
+        </nav>
+    </header>
+
+    <main class="challenge-page">
+        <a href="../ctf.html" class="back-link">← Back to Your Mission</a>
+
+        <section class="challenge-hero">
+            <p class="challenge-kicker">CHALLENGE 03 · FORENSICS</p>
+            <h1 class="challenge-title">A Mysterious Image</h1>
+            <p class="challenge-lead">ORBI says the picture looks normal. The file itself may have something else to say.</p>
+        </section>
+
+        <div class="challenge-layout">
+            <div class="challenge-stack">
+                <section class="challenge-panel">
+                    <h2>Your Task</h2>
+                    <p>Download the image and inspect the file for information that is not visible in the pixels.</p>
+<img src="../Images/orbi-mystery.png" alt="A mysterious ORBI image" class="clue-image">
+<a href="../Images/orbi-mystery.png" download class="download-link">↓ Download the image</a>
+                </section>
+
+                
+        <section class="challenge-panel">
+            <h2>Submit Flag</h2>
+            <p>Flags use the format <code>PLUTO{...}</code>. Input is not case-sensitive.</p>
+            <form class="flag-form"
+                  data-flag-form
+                  data-challenge-id="3"
+                  data-flag-hash="aa7fdac8f885e4ae08748e50b7805e550dfb87b3334e62d088d4fcba266b9bc2">
+                <div class="flag-row">
+                    <input type="text"
+                           class="flag-input"
+                           data-flag-input
+                           autocomplete="off"
+                           spellcheck="false"
+                           placeholder="PLUTO{...}"
+                           aria-label="Challenge flag">
+                    <button type="submit" class="flag-submit">Submit Flag</button>
+                </div>
+                <div class="flag-message" data-flag-message aria-live="polite"></div>
+            </form>
+            <div class="success-actions" data-success-actions hidden>
+                <a href="../ctf.html" class="ctf-action secondary">← Back to Mission</a>
+            </div>
+        </section>
+    
+            </div>
+
+            <aside class="challenge-sidebar">
+                <section class="side-card">
+                    <strong>Challenge 3 of 8</strong>
+                    <p>Forensics</p>
+                </section>
+
+                <section class="side-card">
+                    <strong>Need a hint?</strong>
+                    <p>Hints are optional. Open only what you need.</p>
+                    <details class="hint-box">
+            <summary>Hint 1</summary>
+            <p>Image files can store metadata in addition to pixels.</p>
+        </details>
+<details class="hint-box">
+            <summary>Hint 2</summary>
+            <p>Try a metadata viewer, ExifTool, or the <code>strings</code> command.</p>
+        </details>
+                </section>
+
+                <section class="side-card">
+                    <strong>ORBI says:</strong>
+                    <p>“Exploring how things work is part of the mission.”</p>
+                </section>
+            </aside>
+        </div>
+    </main>
+
+    <canvas id="comet-cursor" aria-hidden="true"></canvas>
+    <canvas id="sky-comets" aria-hidden="true"></canvas>
+</body>
+</html>

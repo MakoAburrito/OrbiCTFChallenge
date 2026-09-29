@@ -1,0 +1,173 @@
+* =========================================================
+   OPERATION ORBI — FAQ PAGE
+   Orange / dark-space theme
+========================================================= */
+
+:root {
+    --faq-orange: #ff6a00;
+    --faq-orange-bright: #ff8a1f;
+    --faq-orange-soft: #ffb66e;
+    --faq-cream: #fff8f1;
+    --faq-muted: #d9c6b7;
+    --faq-card: rgba(28, 12, 4, 0.82);
+    --faq-border: rgba(255, 138, 31, 0.35);
+    --faq-border-strong: rgba(255, 138, 31, 0.8);
+}
+
+.faq-section {
+    width: min(1100px, calc(100% - 40px));
+    margin: 0 auto;
+    padding: 70px 0 100px;
+}
+
+.faq-section > .ctf-eyebrow {
+    margin-bottom: 10px;
+    color: var(--faq-orange-bright);
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+}
+
+.faq-section > h1 {
+    margin-bottom: 18px;
+    color: var(--faq-cream);
+    font-size: clamp(3rem, 7vw, 5rem);
+    line-height: 1;
+    text-shadow:
+        0 0 12px rgba(255, 106, 0, 0.28),
+        0 0 28px rgba(255, 106, 0, 0.12);
+}
+
+.faq-section > p:not(.ctf-eyebrow) {
+    max-width: 720px;
+    margin-bottom: 38px;
+    color: var(--faq-muted);
+    font-size: 1.05rem;
+    line-height: 1.7;
+}
+
+.faq-item {
+    position: relative;
+    margin-bottom: 16px;
+    padding: 24px 26px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255, 106, 0, 0.045),
+            rgba(15, 7, 2, 0.92)
+        );
+
+    border: 1px solid var(--faq-border);
+    border-radius: 14px;
+
+    box-shadow:
+        0 0 18px rgba(255, 106, 0, 0.05);
+
+    backdrop-filter: blur(10px);
+
+    transition:
+        transform 0.2s ease,
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.faq-item:hover {
+    transform: translateY(-2px);
+    border-color: var(--faq-border-strong);
+    box-shadow:
+        0 0 12px rgba(255, 106, 0, 0.12),
+        0 0 30px rgba(255, 106, 0, 0.08);
+}
+
+.faq-item::before {
+    content: "";
+    position: absolute;
+    top: 22px;
+    left: 0;
+    width: 4px;
+    height: 32px;
+    background:
+        linear-gradient(
+            180deg,
+            var(--faq-orange),
+            var(--faq-orange-bright)
+        );
+    border-radius: 0 4px 4px 0;
+    box-shadow:
+        0 0 10px rgba(255, 106, 0, 0.45);
+}
+
+.faq-item h2 {
+    margin: 0 0 10px;
+    color: var(--faq-cream);
+    font-size: 1.15rem;
+    font-weight: 700;
+}
+
+.faq-item p {
+    margin: 0;
+    color: var(--faq-muted);
+    font-size: 0.98rem;
+    line-height: 1.7;
+}
+
+.faq-item code {
+    padding: 3px 7px;
+    color: #ffd2a8;
+    font-family: "Courier New", monospace;
+    background: rgba(255, 106, 0, 0.08);
+    border: 1px solid rgba(255, 138, 31, 0.2);
+    border-radius: 5px;
+}
+
+.faq-item.raffle-faq {
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255, 106, 0, 0.12),
+            rgba(15, 7, 2, 0.94)
+        );
+    border-color: rgba(255, 138, 31, 0.65);
+    box-shadow: 0 0 24px rgba(255, 106, 0, 0.1);
+}
+
+.faq-item.raffle-faq h2 {
+    color: var(--faq-orange-soft);
+}
+
+.faq-item.rules-faq {
+    border-color: rgba(255, 184, 110, 0.38);
+}
+
+.faq-item.rules-faq::before {
+    background: linear-gradient(180deg, #ffb66e, #ff8a1f);
+}
+
+@media (max-width: 700px) {
+    .faq-section {
+        width: min(100% - 28px, 1100px);
+        padding: 45px 0 75px;
+    }
+
+    .faq-section > h1 {
+        font-size: clamp(2.7rem, 13vw, 4.2rem);
+    }
+
+    .faq-section > .ctf-eyebrow {
+        letter-spacing: 4px;
+    }
+
+    .faq-item {
+        padding: 21px 20px 21px 22px;
+    }
+
+    .faq-item h2 {
+        font-size: 1.05rem;
+    }
+
+    .faq-item p {
+        font-size: 0.93rem;
+    }
+}

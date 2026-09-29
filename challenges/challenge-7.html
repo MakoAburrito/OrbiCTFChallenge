@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge 7: Password Problems | Operation ORBI</title>
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/challenges.css">
+    <script src="../scripts/cursor.js" defer></script>
+    <script src="../scripts/sky-comets.js" defer></script>
+    <script src="../scripts/ctf-progress.js" defer></script>
+</head>
+<body>
+    <header class="site-header">
+        <nav class="navbar">
+            <a href="https://www.plutohacks.com/" class="logo">
+                <img src="../Images/plutohacks-logo.svg" alt="PlutoHacks" class="logo-image">
+            </a>
+            <div class="nav-links">
+                <a href="../index.html">About</a>
+                <a href="../ctf.html" class="active" aria-current="page">CTF</a>
+                <a href="../faq.html">FAQ</a>
+            </div>
+            <a href="https://www.plutohacks.com/" class="register-button">
+                BACK TO PLUTOHACKS →
+            </a>
+        </nav>
+    </header>
+
+    <main class="challenge-page">
+        <a href="../ctf.html" class="back-link">← Back to Your Mission</a>
+
+        <section class="challenge-hero">
+            <p class="challenge-kicker">CHALLENGE 07 · SECURITY</p>
+            <h1 class="challenge-title">Password Problems</h1>
+            <p class="challenge-lead">ORBI found a SHA-256 hash and a short list of suspicious candidate passwords. Identify which candidate produced the hash.</p>
+        </section>
+
+        <div class="challenge-layout">
+            <div class="challenge-stack">
+                <section class="challenge-panel">
+                    <h2>Your Task</h2>
+                    <p>Target SHA-256 hash:</p>
+<div class="hash-block">01d06988f0073ac296e22140cbbafd70215e98a2aab095bdafe4e6bd57e96e34</div>
+<p style="margin-top:16px;">Candidate passwords:</p>
+<ul>
+    <li><code>orbi2026</code></li>
+    <li><code>plutohacks</code></li>
+    <li><code>orange-orbi</code></li>
+    <li><code>BuildProtectInnovate</code></li>
+    <li><code>pluto2026!</code></li>
+</ul>
+<p style="margin-top:16px;">When you identify the matching password, submit it as <code>PLUTO{{PASSWORD_IN_UPPERCASE}}</code>, replacing hyphens with underscores.</p>
+                </section>
+
+                
+        <section class="challenge-panel">
+            <h2>Submit Flag</h2>
+            <p>Flags use the format <code>PLUTO{...}</code>. Input is not case-sensitive.</p>
+            <form class="flag-form"
+                  data-flag-form
+                  data-challenge-id="7"
+                  data-flag-hash="568d678b4204786b8749c3a30a8696d7df85af061fb5a20606331678d64c58bc">
+                <div class="flag-row">
+                    <input type="text"
+                           class="flag-input"
+                           data-flag-input
+                           autocomplete="off"
+                           spellcheck="false"
+                           placeholder="PLUTO{...}"
+                           aria-label="Challenge flag">
+                    <button type="submit" class="flag-submit">Submit Flag</button>
+                </div>
+                <div class="flag-message" data-flag-message aria-live="polite"></div>
+            </form>
+            <div class="success-actions" data-success-actions hidden>
+                <a href="../ctf.html" class="ctf-action secondary">← Back to Mission</a>
+            </div>
+        </section>
+    
+            </div>
+
+            <aside class="challenge-sidebar">
+                <section class="side-card">
+                    <strong>Challenge 7 of 8</strong>
+                    <p>Security</p>
+                </section>
+
+                <section class="side-card">
+                    <strong>Need a hint?</strong>
+                    <p>Hints are optional. Open only what you need.</p>
+                    <details class="hint-box">
+            <summary>Hint 1</summary>
+            <p>You do not need to reverse SHA-256. Hash each candidate and compare the result.</p>
+        </details>
+<details class="hint-box">
+            <summary>Hint 2</summary>
+            <p>Your browser console can use <code>crypto.subtle.digest()</code>, or you can use a trusted SHA-256 calculator.</p>
+        </details>
+                </section>
+
+                <section class="side-card">
+                    <strong>ORBI says:</strong>
+                    <p>“Exploring how things work is part of the mission.”</p>
+                </section>
+            </aside>
+        </div>
+    </main>
+
+    <canvas id="comet-cursor" aria-hidden="true"></canvas>
+    <canvas id="sky-comets" aria-hidden="true"></canvas>
+</body>
+</html>

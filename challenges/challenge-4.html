@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge 4: The Video Transmission | Operation ORBI</title>
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/challenges.css">
+    <script src="../scripts/cursor.js" defer></script>
+    <script src="../scripts/sky-comets.js" defer></script>
+    <script src="../scripts/ctf-progress.js" defer></script>
+</head>
+<body>
+    <header class="site-header">
+        <nav class="navbar">
+            <a href="https://www.plutohacks.com/" class="logo">
+                <img src="../Images/plutohacks-logo.svg" alt="PlutoHacks" class="logo-image">
+            </a>
+            <div class="nav-links">
+                <a href="../index.html">About</a>
+                <a href="../ctf.html" class="active" aria-current="page">CTF</a>
+                <a href="../faq.html">FAQ</a>
+            </div>
+            <a href="https://www.plutohacks.com/" class="register-button">
+                BACK TO PLUTOHACKS →
+            </a>
+        </nav>
+    </header>
+
+    <main class="challenge-page">
+        <a href="../ctf.html" class="back-link">← Back to Your Mission</a>
+
+        <section class="challenge-hero">
+            <p class="challenge-kicker">CHALLENGE 04 · FORENSICS</p>
+            <h1 class="challenge-title">The Video Transmission</h1>
+            <p class="challenge-lead">ORBI's recovered feed is unstable. Something important appears for only a fraction of a second.</p>
+        </section>
+
+        <div class="challenge-layout">
+            <div class="challenge-stack">
+                <section class="challenge-panel">
+                    <h2>Your Task</h2>
+                    <p>Watch the looping transmission. If something flashes too quickly, download it and inspect the individual frames.</p>
+<img src="../Images/transmission.gif" alt="Animated ORBI transmission" class="transmission-gif">
+<a href="../Images/transmission.gif" download class="download-link">↓ Download transmission</a>
+                </section>
+
+                
+        <section class="challenge-panel">
+            <h2>Submit Flag</h2>
+            <p>Flags use the format <code>PLUTO{...}</code>. Input is not case-sensitive.</p>
+            <form class="flag-form"
+                  data-flag-form
+                  data-challenge-id="4"
+                  data-flag-hash="fb055518e333aa985a6c9c4ec3b5a5509703878c1930dd46bbddfa6cd7dd726d">
+                <div class="flag-row">
+                    <input type="text"
+                           class="flag-input"
+                           data-flag-input
+                           autocomplete="off"
+                           spellcheck="false"
+                           placeholder="PLUTO{...}"
+                           aria-label="Challenge flag">
+                    <button type="submit" class="flag-submit">Submit Flag</button>
+                </div>
+                <div class="flag-message" data-flag-message aria-live="polite"></div>
+            </form>
+            <div class="success-actions" data-success-actions hidden>
+                <a href="../ctf.html" class="ctf-action secondary">← Back to Mission</a>
+            </div>
+        </section>
+    
+            </div>
+
+            <aside class="challenge-sidebar">
+                <section class="side-card">
+                    <strong>Challenge 4 of 8</strong>
+                    <p>Forensics</p>
+                </section>
+
+                <section class="side-card">
+                    <strong>Need a hint?</strong>
+                    <p>Hints are optional. Open only what you need.</p>
+                    <details class="hint-box">
+            <summary>Hint 1</summary>
+            <p>The clue may not stay on screen long enough to read normally.</p>
+        </details>
+<details class="hint-box">
+            <summary>Hint 2</summary>
+            <p>Animated GIFs are made of separate frames that can be extracted.</p>
+        </details>
+                </section>
+
+                <section class="side-card">
+                    <strong>ORBI says:</strong>
+                    <p>“Exploring how things work is part of the mission.”</p>
+                </section>
+            </aside>
+        </div>
+    </main>
+
+    <canvas id="comet-cursor" aria-hidden="true"></canvas>
+    <canvas id="sky-comets" aria-hidden="true"></canvas>
+</body>
+</html>

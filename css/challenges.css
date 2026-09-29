@@ -1,0 +1,425 @@
+/* =========================================================
+   OPERATION ORBI — CHALLENGE + COMPLETION PAGES
+   Kept separate from ctf.css so individual challenge pages
+   can evolve without changing the dashboard layout.
+========================================================= */
+
+:root {
+    --ctf-orange: #ff6a00;
+    --ctf-orange-bright: #ff8a1f;
+    --ctf-orange-soft: #ffb66e;
+    --ctf-cream: #fff8f1;
+    --ctf-muted: #d9c6b7;
+    --ctf-card: rgba(30, 12, 4, .84);
+    --ctf-card-dark: rgba(13, 6, 2, .92);
+    --ctf-border: rgba(255, 138, 31, .36);
+    --ctf-success: #7ee2a8;
+    --ctf-error: #ff8066;
+}
+
+.challenge-page {
+    width: min(1080px, calc(100% - 40px));
+    margin: 0 auto;
+    padding: 54px 0 90px;
+}
+
+.back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 28px;
+    color: var(--ctf-orange-soft);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
+.challenge-hero {
+    margin-bottom: 28px;
+}
+
+.challenge-kicker {
+    margin-bottom: 10px;
+    color: var(--ctf-orange-bright);
+    font-size: .78rem;
+    font-weight: 700;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+
+.challenge-title {
+    margin-bottom: 16px;
+    color: var(--ctf-cream);
+    font-size: clamp(2.4rem, 7vw, 4.6rem);
+    line-height: 1.04;
+    text-shadow: 0 0 22px rgba(255, 106, 0, .2);
+}
+
+.challenge-lead {
+    max-width: 760px;
+    color: var(--ctf-muted);
+    font-size: 1.07rem;
+    line-height: 1.7;
+}
+
+.challenge-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 310px;
+    gap: 20px;
+    align-items: start;
+}
+
+.challenge-stack {
+    display: grid;
+    gap: 20px;
+}
+
+.challenge-panel {
+    padding: 26px;
+    background: var(--ctf-card);
+    border: 1px solid var(--ctf-border);
+    border-radius: 16px;
+    box-shadow: 0 0 28px rgba(255, 106, 0, .07);
+    backdrop-filter: blur(10px);
+}
+
+.challenge-panel h2 {
+    margin-bottom: 12px;
+    color: var(--ctf-cream);
+    font-size: 1.2rem;
+}
+
+.challenge-panel p,
+.challenge-panel li {
+    color: var(--ctf-muted);
+    line-height: 1.65;
+}
+
+.challenge-panel ul {
+    padding-left: 22px;
+}
+
+.challenge-panel code,
+.code-block,
+.hash-block {
+    font-family: "Courier New", monospace;
+}
+
+.code-block,
+.hash-block {
+    margin-top: 16px;
+    padding: 18px;
+    overflow-wrap: anywhere;
+    color: #ffd7b0;
+    background: #080402;
+    border: 1px solid rgba(255, 138, 31, .24);
+    border-radius: 12px;
+    white-space: pre-wrap;
+}
+
+.hash-block {
+    font-size: .86rem;
+}
+
+.clue-image,
+.transmission-gif {
+    display: block;
+    width: 100%;
+    max-height: 470px;
+    object-fit: contain;
+    margin-top: 16px;
+    padding: 12px;
+    background: rgba(7, 3, 1, .7);
+    border: 1px solid rgba(255, 138, 31, .25);
+    border-radius: 14px;
+}
+
+.download-link,
+.inline-link {
+    display: inline-flex;
+    margin-top: 14px;
+    color: var(--ctf-orange-soft);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.download-link:hover,
+.inline-link:hover {
+    text-decoration: underline;
+}
+
+.hint-box {
+    margin-top: 12px;
+    padding: 14px 16px;
+    color: var(--ctf-muted);
+    background: rgba(255, 106, 0, .04);
+    border: 1px solid rgba(255, 138, 31, .18);
+    border-radius: 10px;
+}
+
+.hint-box summary {
+    color: #ffd0a4;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.hint-box p {
+    margin-top: 10px;
+}
+
+.challenge-sidebar {
+    position: sticky;
+    top: 24px;
+    display: grid;
+    gap: 16px;
+}
+
+.side-card {
+    padding: 20px;
+    background: var(--ctf-card-dark);
+    border: 1px solid var(--ctf-border);
+    border-radius: 14px;
+}
+
+.side-card strong {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--ctf-orange-bright);
+}
+
+.side-card p {
+    color: var(--ctf-muted);
+    font-size: .9rem;
+    line-height: 1.5;
+}
+
+.flag-form {
+    margin-top: 16px;
+}
+
+.flag-row {
+    display: flex;
+    gap: 12px;
+}
+
+.flag-input {
+    flex: 1;
+    min-width: 0;
+    padding: 15px 16px;
+    color: var(--ctf-cream);
+    background: #090402;
+    border: 1px solid rgba(255, 138, 31, .4);
+    border-radius: 10px;
+    outline: none;
+}
+
+.flag-input:focus {
+    border-color: var(--ctf-orange-bright);
+    box-shadow: 0 0 0 3px rgba(255, 106, 0, .12);
+}
+
+.flag-submit,
+.ctf-action {
+    appearance: none;
+    border: 0;
+    padding: 14px 20px;
+    color: white;
+    background: linear-gradient(135deg, #ff6a00, #ff9a2e);
+    border-radius: 10px;
+    font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
+    box-shadow: 0 0 22px rgba(255, 106, 0, .18);
+    transition: transform .18s ease, filter .18s ease;
+}
+
+.flag-submit:hover,
+.ctf-action:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.06);
+}
+
+.ctf-action.secondary {
+    color: var(--ctf-orange-soft);
+    background: transparent;
+    border: 1px solid rgba(255, 138, 31, .42);
+    box-shadow: none;
+}
+
+.flag-message {
+    min-height: 24px;
+    margin-top: 12px;
+    font-size: .9rem;
+}
+
+.flag-message.success {
+    color: var(--ctf-success);
+}
+
+.flag-message.error {
+    color: var(--ctf-error);
+}
+
+.success-actions {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 16px;
+}
+
+.locked-panel {
+    padding: 22px;
+    color: var(--ctf-muted);
+    background: rgba(255, 128, 102, .05);
+    border: 1px solid rgba(255, 128, 102, .25);
+    border-radius: 12px;
+}
+
+/* Completion pages */
+
+.completion-page {
+    min-height: calc(100vh - 120px);
+    display: grid;
+    place-items: center;
+    padding: 55px 20px 90px;
+}
+
+.completion-card {
+    width: min(850px, 100%);
+    padding: clamp(28px, 5vw, 48px);
+    text-align: center;
+    background: var(--ctf-card-dark);
+    border: 1px solid rgba(255, 138, 31, .52);
+    border-radius: 22px;
+    box-shadow:
+        0 0 18px rgba(255, 106, 0, .18),
+        0 0 55px rgba(255, 106, 0, .08);
+}
+
+.completion-icon {
+    font-size: 3.4rem;
+    margin-bottom: 14px;
+}
+
+.completion-label {
+    margin-bottom: 12px;
+    color: var(--ctf-orange-bright);
+    font-size: .8rem;
+    font-weight: 800;
+    letter-spacing: 5px;
+}
+
+.completion-title {
+    margin-bottom: 16px;
+    color: var(--ctf-cream);
+    font-size: clamp(2.6rem, 8vw, 5.4rem);
+    line-height: 1;
+    text-shadow: 0 0 28px rgba(255, 106, 0, .28);
+}
+
+.completion-copy {
+    max-width: 650px;
+    margin: 0 auto;
+    color: var(--ctf-muted);
+    line-height: 1.7;
+}
+
+.ticket-card {
+    margin: 28px 0;
+    padding: 22px;
+    color: #2b1104;
+    background: linear-gradient(135deg, #ff8a1f, #ffc170);
+    border: 2px dashed rgba(62, 25, 3, .42);
+    border-radius: 14px;
+    font-weight: 800;
+}
+
+.completion-actions {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+/* Secret alternate completion style */
+.override-card {
+    position: relative;
+    overflow: hidden;
+    border-color: rgba(126, 226, 168, .6);
+    box-shadow:
+        0 0 18px rgba(126, 226, 168, .18),
+        0 0 55px rgba(255, 106, 0, .08);
+}
+
+.override-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: .14;
+    background: repeating-linear-gradient(
+        to bottom,
+        transparent 0,
+        transparent 3px,
+        rgba(126, 226, 168, .25) 4px
+    );
+}
+
+.override-card .completion-label {
+    color: var(--ctf-success);
+}
+
+.override-card .completion-title {
+    color: #dffff0;
+    text-shadow:
+        2px 0 #ff6a00,
+        -2px 0 #7ee2a8,
+        0 0 24px rgba(126, 226, 168, .24);
+}
+
+.override-ticket {
+    background: linear-gradient(135deg, #7ee2a8, #ffd07f);
+}
+
+.denied-code {
+    display: inline-block;
+    margin: 18px 0;
+    padding: 10px 14px;
+    color: var(--ctf-error);
+    background: #090402;
+    border: 1px solid rgba(255, 128, 102, .3);
+    border-radius: 8px;
+    font-family: "Courier New", monospace;
+}
+
+@media (max-width: 850px) {
+    .challenge-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .challenge-sidebar {
+        position: static;
+    }
+}
+
+@media (max-width: 560px) {
+    .challenge-page {
+        width: min(100% - 28px, 1080px);
+        padding-top: 34px;
+    }
+
+    .flag-row {
+        flex-direction: column;
+    }
+
+    .flag-submit {
+        width: 100%;
+    }
+
+    .completion-card {
+        padding: 26px 20px;
+    }
+}

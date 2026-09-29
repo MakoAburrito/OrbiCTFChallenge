@@ -1,0 +1,603 @@
+/* ==========================================
+   CTF PAGE
+========================================== */
+
+.ctf-page {
+    max-width: 1400px;
+
+    margin: auto;
+
+    padding:
+        60px
+        7%
+        100px;
+}
+
+
+/* ==========================================
+   CTF INTRO
+========================================== */
+
+.ctf-intro {
+    max-width: 800px;
+
+    margin-bottom: 55px;
+}
+
+.ctf-eyebrow {
+    color: #ff9a2e;
+
+    font-size: 0.9rem;
+
+    font-weight: 700;
+
+    letter-spacing: 6px;
+
+    margin-bottom: 10px;
+}
+
+.ctf-intro h1 {
+    color: #fff;
+
+    font-size:
+        clamp(
+            3rem,
+            7vw,
+            5.5rem
+        );
+
+    line-height: 1;
+
+    margin-bottom: 20px;
+
+    text-shadow:
+        0 0 20px
+        rgba(
+            255,
+            106,
+            0,
+            0.25
+        );
+}
+
+.ctf-description {
+    max-width: 700px;
+
+    color: #d9c6b7;
+
+    font-size: 1.1rem;
+
+    line-height: 1.7;
+}
+
+
+/* ==========================================
+   PROGRESS
+========================================== */
+
+.ctf-progress {
+    max-width: 700px;
+
+    margin-top: 30px;
+}
+
+.progress-heading {
+    display: flex;
+
+    justify-content: space-between;
+
+    margin-bottom: 10px;
+
+    color: #f5e7dc;
+
+    font-size: 0.9rem;
+}
+
+.progress-track {
+    width: 100%;
+
+    height: 12px;
+
+    overflow: hidden;
+
+    background:
+        rgba(
+            255,
+            125,
+            25,
+            0.12
+        );
+
+    border:
+        1px solid
+        rgba(
+            255,
+            132,
+            35,
+            0.35
+        );
+
+    border-radius: 999px;
+}
+
+.progress-fill {
+    width: 0%;
+
+    height: 100%;
+
+    background:
+        linear-gradient(
+            90deg,
+            #ff6a00,
+            #ff9a2e
+        );
+
+    border-radius: inherit;
+
+    box-shadow:
+        0 0 15px
+        rgba(
+            255,
+            106,
+            0,
+            0.6
+        );
+
+    transition:
+        width
+        0.4s
+        ease;
+}
+
+
+/* ==========================================
+   CHALLENGE GRID
+========================================== */
+
+.challenge-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            2,
+            minmax(
+                0,
+                1fr
+            )
+        );
+
+    gap: 20px;
+}
+
+
+/* ==========================================
+   CHALLENGE CARD
+========================================== */
+
+.challenge-card {
+    min-height: 190px;
+
+    position: relative;
+
+    padding: 28px;
+
+    display: grid;
+
+    grid-template-columns:
+        auto
+        1fr
+        auto;
+
+    gap: 20px;
+
+    align-items: center;
+
+    color: white;
+
+    text-decoration: none;
+
+    background:
+        rgba(
+            22,
+            10,
+            4,
+            0.82
+        );
+
+    border:
+        1px solid
+        rgba(
+            255,
+            132,
+            35,
+            0.35
+        );
+
+    border-radius: 16px;
+
+    backdrop-filter:
+        blur(12px);
+
+    transition:
+        transform
+        0.2s ease,
+        border-color
+        0.2s ease,
+        box-shadow
+        0.2s ease;
+}
+
+
+/* CARD HOVER */
+
+.challenge-card:hover {
+    transform:
+        translateY(-5px);
+
+    border-color:
+        rgba(
+            255,
+            132,
+            35,
+            0.9
+        );
+
+    box-shadow:
+        0 0 15px
+        rgba(
+            255,
+            106,
+            0,
+            0.18
+        ),
+        0 0 35px
+        rgba(
+            255,
+            106,
+            0,
+            0.12
+        );
+}
+
+
+/* ==========================================
+   CHALLENGE NUMBER
+========================================== */
+
+.challenge-number {
+    position: absolute;
+
+    top: 18px;
+    right: 20px;
+
+    color:
+        rgba(
+            255,
+            154,
+            46,
+            0.3
+        );
+
+    font-size: 0.85rem;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+
+/* ==========================================
+   CHALLENGE ICON
+========================================== */
+
+.challenge-icon {
+    width: 65px;
+    height: 65px;
+
+    display: grid;
+
+    place-items: center;
+
+    flex-shrink: 0;
+
+    color: #ff9a2e;
+
+    font-size: 1.7rem;
+
+    background:
+        rgba(
+            255,
+            106,
+            0,
+            0.1
+        );
+
+    border:
+        1px solid
+        rgba(
+            255,
+            132,
+            35,
+            0.25
+        );
+
+    border-radius: 13px;
+}
+
+
+/* ==========================================
+   CHALLENGE INFORMATION
+========================================== */
+
+.challenge-type {
+    display: inline-block;
+
+    margin-bottom: 6px;
+
+    color: #ff9a2e;
+
+    font-size: 0.7rem;
+
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+
+    text-transform: uppercase;
+}
+
+.challenge-info h2 {
+    margin-bottom: 8px;
+
+    font-size: 1.25rem;
+}
+
+.challenge-info p {
+    max-width: 450px;
+
+    color: #cdbbac;
+
+    font-size: 0.9rem;
+
+    line-height: 1.5;
+}
+
+
+/* ==========================================
+   ARROW
+========================================== */
+
+.challenge-arrow {
+    color: #ff8a1f;
+
+    font-size: 1.5rem;
+
+    transition:
+        transform
+        0.2s ease;
+}
+
+.challenge-card:hover
+.challenge-arrow {
+    transform:
+        translateX(5px);
+}
+
+
+/* ==========================================
+   FINAL CHALLENGE
+========================================== */
+
+.final-challenge {
+    border-color:
+        rgba(
+            255,
+            154,
+            46,
+            0.65
+        );
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(
+                255,
+                106,
+                0,
+                0.12
+            ),
+            rgba(
+                15,
+                7,
+                2,
+                0.88
+            )
+        );
+}
+
+
+/* ==========================================
+   ORBI MESSAGE
+========================================== */
+
+.orbi-message {
+    max-width: 700px;
+
+    margin:
+        50px
+        auto
+        0;
+
+    padding:
+        22px
+        30px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+
+    background:
+        rgba(
+            22,
+            10,
+            4,
+            0.6
+        );
+
+    border:
+        1px solid
+        rgba(
+            255,
+            132,
+            35,
+            0.25
+        );
+
+    border-radius: 15px;
+
+    text-align: left;
+}
+
+.orbi-message-icon {
+    font-size: 2rem;
+}
+
+.orbi-message p {
+    color: #f5e7dc;
+
+    font-style: italic;
+
+    line-height: 1.5;
+}
+
+.orbi-message span {
+    display: block;
+
+    margin-top: 4px;
+
+    color: #ff9a2e;
+
+    font-size: 0.8rem;
+}
+
+
+/* ==========================================
+   MOBILE CTF
+========================================== */
+
+@media (
+    max-width: 800px
+) {
+
+    .ctf-page {
+        padding:
+            40px
+            20px
+            80px;
+    }
+
+    .challenge-grid {
+        grid-template-columns:
+            1fr;
+    }
+
+}
+
+
+@media (
+    max-width: 500px
+) {
+
+    .challenge-card {
+        grid-template-columns:
+            auto
+            1fr;
+
+        padding: 22px;
+    }
+
+    .challenge-arrow {
+        display: none;
+    }
+
+    .challenge-icon {
+        width: 50px;
+        height: 50px;
+    }
+
+}
+
+
+/* ==========================================
+   DASHBOARD PROGRESS STATES
+========================================== */
+
+.challenge-status {
+    display: inline-block;
+    margin-top: 12px;
+    color: #cdbbac;
+    font-size: 0.76rem;
+    font-weight: 700;
+}
+
+.challenge-card.completed {
+    border-color: rgba(126, 226, 168, 0.55);
+    background:
+        linear-gradient(
+            135deg,
+            rgba(126, 226, 168, 0.06),
+            rgba(22, 10, 4, 0.82)
+        );
+}
+
+.challenge-card.completed .challenge-type,
+.challenge-card.completed .challenge-status {
+    color: #7ee2a8;
+}
+
+.challenge-card.locked {
+    opacity: 0.62;
+    filter: saturate(0.6);
+}
+
+.challenge-card.locked:hover {
+    transform: none;
+    box-shadow: none;
+}
+
+.mission-complete-banner {
+    max-width: 900px;
+    margin: 0 0 34px;
+    padding: 20px 22px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+    background: rgba(126, 226, 168, 0.07);
+    border: 1px solid rgba(126, 226, 168, 0.4);
+    border-radius: 14px;
+}
+
+.mission-complete-banner[hidden] {
+    display: none;
+}
+
+.mission-complete-banner strong {
+    color: #7ee2a8;
+}
+
+.mission-complete-banner p {
+    margin-top: 4px;
+    color: #d9c6b7;
+}
+
+.mission-complete-link {
+    flex: 0 0 auto;
+    padding: 12px 17px;
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+    background: linear-gradient(135deg, #ff6a00, #ff9a2e);
+    border-radius: 10px;
+}

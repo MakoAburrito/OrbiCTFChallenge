@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge 1: The Hidden Message | Operation ORBI</title>
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/challenges.css">
+    <script src="../scripts/cursor.js" defer></script>
+    <script src="../scripts/sky-comets.js" defer></script>
+    <script src="../scripts/ctf-progress.js" defer></script>
+</head>
+<body>
+    <header class="site-header">
+        <nav class="navbar">
+            <a href="https://www.plutohacks.com/" class="logo">
+                <img src="../Images/plutohacks-logo.svg" alt="PlutoHacks" class="logo-image">
+            </a>
+            <div class="nav-links">
+                <a href="../index.html">About</a>
+                <a href="../ctf.html" class="active" aria-current="page">CTF</a>
+                <a href="../faq.html">FAQ</a>
+            </div>
+            <a href="https://www.plutohacks.com/" class="register-button">
+                BACK TO PLUTOHACKS →
+            </a>
+        </nav>
+    </header>
+
+    <main class="challenge-page">
+        <a href="../ctf.html" class="back-link">← Back to Your Mission</a>
+
+        <section class="challenge-hero">
+            <p class="challenge-kicker">CHALLENGE 01 · BEGINNER · WEB</p>
+            <h1 class="challenge-title">The Hidden Message</h1>
+            <p class="challenge-lead">ORBI recovered a page fragment. The message is not visible on the page, but the browser received more than it is showing.</p>
+        </section>
+
+        <div class="challenge-layout">
+            <div class="challenge-stack">
+                <section class="challenge-panel">
+                    <h2>Your Task</h2>
+                    <p>Find the hidden flag somewhere in this challenge page.</p>
+<div class="code-block">ORBI RECOVERY NOTE:
+Visible text is not always the whole document.
+
+The browser receives HTML before it draws the page.</div>
+<!-- ORBI RECOVERY FRAGMENT: PLUTO{SOURCE_FOUND} -->
+                </section>
+
+                
+        <section class="challenge-panel">
+            <h2>Submit Flag</h2>
+            <p>Flags use the format <code>PLUTO{...}</code>. Input is not case-sensitive.</p>
+            <form class="flag-form"
+                  data-flag-form
+                  data-challenge-id="1"
+                  data-flag-hash="d95d5bf3f30a607f7eba230c97d4e74c31459719896612d2306a07620131a047">
+                <div class="flag-row">
+                    <input type="text"
+                           class="flag-input"
+                           data-flag-input
+                           autocomplete="off"
+                           spellcheck="false"
+                           placeholder="PLUTO{...}"
+                           aria-label="Challenge flag">
+                    <button type="submit" class="flag-submit">Submit Flag</button>
+                </div>
+                <div class="flag-message" data-flag-message aria-live="polite"></div>
+            </form>
+            <div class="success-actions" data-success-actions hidden>
+                <a href="../ctf.html" class="ctf-action secondary">← Back to Mission</a>
+            </div>
+        </section>
+    
+            </div>
+
+            <aside class="challenge-sidebar">
+                <section class="side-card">
+                    <strong>Challenge 1 of 8</strong>
+                    <p>Beginner · Web</p>
+                </section>
+
+                <section class="side-card">
+                    <strong>Need a hint?</strong>
+                    <p>Hints are optional. Open only what you need.</p>
+                    <details class="hint-box">
+            <summary>Hint 1</summary>
+            <p>Try looking at the page's HTML source instead of only the rendered page.</p>
+        </details>
+<details class="hint-box">
+            <summary>Hint 2</summary>
+            <p>On many desktop browsers, Ctrl+U opens View Source.</p>
+        </details>
+                </section>
+
+                <section class="side-card">
+                    <strong>ORBI says:</strong>
+                    <p>“Exploring how things work is part of the mission.”</p>
+                </section>
+            </aside>
+        </div>
+    </main>
+
+    <canvas id="comet-cursor" aria-hidden="true"></canvas>
+    <canvas id="sky-comets" aria-hidden="true"></canvas>
+</body>
+</html>

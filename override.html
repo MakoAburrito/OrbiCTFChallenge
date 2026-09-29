@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>System Override | Operation ORBI</title>
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/challenges.css">
+    <script src="scripts/cursor.js" defer></script>
+    <script src="scripts/sky-comets.js" defer></script>
+    <script src="scripts/ctf-progress.js" defer></script>
+</head>
+<body data-override-page>
+    <header class="site-header">
+        <nav class="navbar">
+            <a href="https://www.plutohacks.com/" class="logo">
+                <img src="Images/plutohacks-logo.svg" alt="PlutoHacks" class="logo-image">
+            </a>
+            <div class="nav-links">
+                <a href="index.html">About</a>
+                <a href="ctf.html" class="active" aria-current="page">CTF</a>
+                <a href="faq.html">FAQ</a>
+            </div>
+            <a href="https://www.plutohacks.com/" class="register-button">
+                BACK TO PLUTOHACKS →
+            </a>
+        </nav>
+    </header>
+
+    <main class="completion-page">
+        <section class="completion-card override-card" data-override-accepted hidden>
+            <div class="completion-icon">⚠️</div>
+            <p class="completion-label">DIAGNOSTIC OVERRIDE ACCEPTED</p>
+            <h1 class="completion-title">YOU FOUND ANOTHER WAY.</h1>
+            <p class="completion-copy">
+                You did not follow ORBI's normal recovery path. You found and changed
+                a client-controlled system state instead. That is exactly the kind of
+                curiosity a CTF rewards.
+            </p>
+
+            <div class="ticket-card override-ticket">
+                🎟️ ALTERNATE COMPLETION PATH — This screen is valid for a raffle ticket.
+            </div>
+
+            <p class="completion-copy" style="margin-bottom:26px;">
+                ORBI: “...clever. I'll allow it.”
+            </p>
+
+            <div class="completion-actions">
+                <a href="index.html" class="ctf-action">Return Home</a>
+            </div>
+        </section>
+
+        <section class="completion-card override-card" data-override-denied>
+            <div class="completion-icon">⛔</div>
+            <p class="completion-label">DIAGNOSTIC CONSOLE</p>
+            <h1 class="completion-title">ACCESS DENIED</h1>
+            <p class="completion-copy">
+                The diagnostic endpoint exists, but the current ORBI system state
+                does not permit an override.
+            </p>
+            <div class="denied-code">ERR_STATE // recovery-mode</div>
+            <div class="completion-actions">
+                <a href="ctf.html" class="ctf-action secondary">Return to Mission</a>
+            </div>
+        </section>
+    </main>
+
+    <canvas id="comet-cursor" aria-hidden="true"></canvas>
+    <canvas id="sky-comets" aria-hidden="true"></canvas>
+</body>
+</html>
